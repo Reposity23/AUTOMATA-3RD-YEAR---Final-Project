@@ -1,8 +1,8 @@
 ## CS 300-CS31S1 - Automata Theory and Formal Languages - FINAL PROJECT
 
 ## Programs
-- **Program 1:** ✅ Done
-- **Program 2:** ⏳ In Progress
+- **Program 1:** Done
+- **Program 2:** In Progress
 
 ## Notes
 - To run **Program 1**, make sure you have `tkinter` installed:
