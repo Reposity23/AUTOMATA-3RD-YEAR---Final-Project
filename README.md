@@ -1,4 +1,4 @@
-# Project Status
+###CS 300-CS31S1 - Automata Theory and Formal Languages - FINAL PROJECT
 
 ## Programs
 - **Program 1:** ✅ Done
