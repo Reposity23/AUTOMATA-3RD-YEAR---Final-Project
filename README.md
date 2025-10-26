@@ -1,5 +1,5 @@
 AUTOMATA-3RD-YEAR---Final-Project
-
+PROGRAM #1
 A visual NFA (Nondeterministic Finite Automaton) editor and DFA (Deterministic Finite Automaton) converter, built with Python and Tkinter. This tool allows users to graphically design an NFA, which can then be automatically converted into its equivalent DFA transition table.
 
 <img width="990" height="590" alt="image" src="https://github.com/user-attachments/assets/519e6ca1-eeee-47db-8d1f-afbf7d1f3f2b" />
