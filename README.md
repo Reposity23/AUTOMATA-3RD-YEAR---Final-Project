@@ -9,13 +9,16 @@
 ```bash
 pip install tk
 ```
-# Automata 3rd Year - Final Project: Program #1
+# NFA -> DFA
 
 A **visual NFA (Nondeterministic Finite Automaton) editor** with **DFA (Deterministic Finite Automaton) conversion**, built using Python and Tkinter. Design NFAs graphically and automatically generate their equivalent DFA transition tables.  
 
-![App Screenshot](https://github.com/user-attachments/assets/519e6ca1-eeee-47db-8d1f-afbf7d1f3f2b)
+<img width="1023" height="675" alt="image" src="https://github.com/user-attachments/assets/e29b45b3-9793-420c-bac4-825cf702f15f" />
+
 
 ---
+<img width="989" height="312" alt="image" src="https://github.com/user-attachments/assets/a73e8dba-93f8-4827-9423-a5dfd900bd79" />
+
 
 ## Features
 
