@@ -80,3 +80,10 @@ Right-click a state to access:
 git clone https://github.com/Reposity23/AUTOMATA-3RD-YEAR---Final-Project.git
 cd automata-3rd-year-final-project
 python main.py
+
+```
+###Credits
+---
+Program 1 Inspiration & Knowledge: HTML/JavaScript NFA → DFA visualizer by JoeyLemon
+---
+Used the structure and logic of the graphing and transition table as inspiration and reference to implement the Python/Tkinter version.
