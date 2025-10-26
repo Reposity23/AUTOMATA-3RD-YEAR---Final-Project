@@ -85,5 +85,7 @@ python main.py
 ###Credits
 ---
 Program 1 Inspiration & Knowledge: HTML/JavaScript NFA → DFA visualizer by JoeyLemon
+----
+link: https://github.com/joeylemon/nfa-to-dfa
 ---
 Used the structure and logic of the graphing and transition table as inspiration and reference to implement the Python/Tkinter version.
