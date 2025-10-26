@@ -1,9 +1,14 @@
-##STATUS:
----
-PROGRAM 1: DONE
----
-PROGRAM 2: IN PROGRESS
+# Project Status
 
+## Programs
+- **Program 1:** ✅ Done
+- **Program 2:** ⏳ In Progress
+
+## Notes
+- To run **Program 1**, make sure you have `tkinter` installed:
+```bash
+pip install tk
+```
 # Automata 3rd Year - Final Project: Program #1
 
 A **visual NFA (Nondeterministic Finite Automaton) editor** with **DFA (Deterministic Finite Automaton) conversion**, built using Python and Tkinter. Design NFAs graphically and automatically generate their equivalent DFA transition tables.  
