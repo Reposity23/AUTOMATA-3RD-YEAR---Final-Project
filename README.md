@@ -37,6 +37,8 @@ Scroll: Use your mouse wheel anywhere outside the graph canvas (e.g., over the t
 3. State Operations (Right-Click Menu)
 
 Right-click on any state (circle) inside the graph box to open a context menu with three options:
+<img width="258" height="222" alt="image" src="https://github.com/user-attachments/assets/eae4564b-2784-4ddb-8cb1-a95f7f419226" />
+
 
 Set as Starting State: Marks the state as the NFA's start state. An arrow will appear, pointing to it.
 
