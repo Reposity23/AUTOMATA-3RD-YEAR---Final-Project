@@ -10,4 +10,3 @@ import os
 import base64
 import re
 
-API_KEY = "xai-190haggHSufNOBu1YOmy9WHhJIKG4XsU9S9VHQlPXvki6QrUm98qXmGBNEiifwxEgLwShjVP8qvviiYM"
