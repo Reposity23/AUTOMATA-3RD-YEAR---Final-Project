@@ -66,6 +66,6 @@ Right-click a state to access:
 ## Installation & Running
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/Reposity23/AUTOMATA-3RD-YEAR---Final-Project.git
 cd automata-3rd-year-final-project
 python main.py
