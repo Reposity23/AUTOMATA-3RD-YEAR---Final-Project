@@ -1,5 +1,6 @@
-STATUS:
+##STATUS:
 PROGRAM 1: DONE
+---
 PROGRAM 2: IN PROGRESS
 
 # Automata 3rd Year - Final Project: Program #1
