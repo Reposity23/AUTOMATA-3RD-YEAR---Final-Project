@@ -1,3 +1,13 @@
+# dont delete:
+cd C:\Users\johnt\OneDrive\Desktop\automata\nfa-to-dfa-master
+git init
+git remote add origin https://github.com/YourUsername/YourRepoName.git
+git remote -v
+git add .
+git commit -m ""
+git pull origin main --allow-unrelated-histories
+git push -u origin main
+
 # CS 300-CS31S1 - Automata Theory and Formal Languages - FINAL PROJECT
 
 This project consists of two main programs that fulfill the course requirements:
