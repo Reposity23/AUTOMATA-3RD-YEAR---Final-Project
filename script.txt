@@ -7,7 +7,7 @@ This tool allows anyone to graphically design a Nondeterministic Finite Automato
 For our implementation program, we created Program 2, a command-line tool that takes a DFA in a JSON format—like the one from Program 1—and uses Hopcroft's minimization algorithm to produce its most optimized, minimal-state equivalent.<br>
 This combination allows us to visually design an automaton, like one for a text parser or a simple vending machine, and then use a core algorithm to make it as efficient as possible.<br>
 To start our demo, I'll pass it over to Member 2 to demonstrate Program 1.<br>
-
+<br>
 # Member 2 Program 1: Visual NFA to DFA Converter Demo<br>
 Thank you. I am now running Program 1.<br>
 Okay, so here is our Visual NFA to DFA editor, which we built using Python and Tkinter.<br>
@@ -35,7 +35,7 @@ It also correctly identifies the dead state, Ø, for any undefined transitions.<
 Finally, to pass this to the next part of our project, I'll save this machine.<br>
 I'll click 'Export to .JSON'. This saves our new DFA as OUTPUT1.json.<br>
 That concludes the demo for Program 1. Now, Member 3 will show you Program 2.<br>
-
+<br>
 # Member 3 Program 2: DFA Minimization Tool Demo<br>
 Thanks. I am now in the terminal to run Program 2, our DFA Minimization tool.<br>
 This program implements Hopcroft's algorithm, which is a very efficient method for minimizing DFAs.<br>
@@ -53,7 +53,7 @@ This new table represents the most efficient automaton—the one with the fewest
 Finally, the program asks if I want to save this minimized DFA to a new JSON file.<br>
 I'll type 'y' for yes, and I'll name the file minimized.json.<br>
 This completes the demo of Program 2. Now, I'll hand it over to Member 4 for the conclusion.<br>
-
+<br>
 # Member 4 Conclusion<br>
 Thank you. To summarize our project, we have successfully demonstrated the complete workflow of designing and optimizing an automaton.<br>
 Our Program 1, the 'real-life application', provides a visual, user-friendly interface to build complex NFAs and apply the subset construction algorithm to convert them into DFAs.<br>
