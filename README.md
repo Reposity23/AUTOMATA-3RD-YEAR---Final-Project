@@ -82,25 +82,13 @@ Enter path to input DFA JSON file: OUTPUT1.json
 
 Minimization complete.
 
---- Original DFA (Reachable) ---
-State           | a | b
--------------------------------
-→{1}            | {2,3} | {1}
-*{2,3}          | {4} | {1}
-*{4}            | {4} | {4}
+<img width="779" height="271" alt="image" src="https://github.com/user-attachments/assets/df2fb766-daf7-4e6e-baf9-5e6e542af3e1" />
+<br>
+<img width="297" height="453" alt="image" src="https://github.com/user-attachments/assets/cdfb1266-3a56-4dff-8a54-698338eba783" />
+<br>
+<img width="556" height="373" alt="image" src="https://github.com/user-attachments/assets/91bce650-f4cc-4d9f-8ca0-7c7e6487996c" />
 
---- Minimized DFA ---
-State           | a | b
--------------------------------
-→{{1}}          | {{2,3}} | {{1}}
-*{{2,3}}        | {{4}} | {{1}}
-*{{4}}          | {{4}} | {{4}}
-{{__DEAD__}}    | {{__DEAD__}} | {{__DEAD__}}
 
-Save minimized DFA to a new JSON file? (y/n): y
-Enter output filename (e.g., minimized_dfa.json): minimized.json
-
-Successfully saved minimized DFA to 'minimized.json'
 
 Credits:
 Program 1 Inspiration & Knowledge: HTML/JavaScript NFA → DFA visualizer by JoeyLemon.
