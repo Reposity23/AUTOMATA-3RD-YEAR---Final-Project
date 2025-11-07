@@ -75,7 +75,7 @@ JSON Output: Asks the user if they want to save the new minimized DFA back to a 
 How to Use Program 2:
 Use Program 1 to create a DFA and export it (e.g., OUTPUT1.json). Run Program 2 from your terminal. Follow the command-line prompts: It will ask for the path to your input JSON file, print its progress showing the original reachable DFA table and the new minimized table, and finally ask if you want to save the result.
 
-Sample Output:
+
 ====================================
   Program 2: DFA Minimization Tool
 ====================================
