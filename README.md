@@ -1,12 +1,12 @@
 # dont delete:
-cd C:\Users\johnt\OneDrive\Desktop\automata\nfa-to-dfa-master
-git init
-git remote add origin https://github.com/YourUsername/YourRepoName.git
-git remote -v
-git add .
-git commit -m ""
-git pull origin main --allow-unrelated-histories
-git push -u origin main
+cd C:\Users\johnt\OneDrive\Desktop\automata\nfa-to-dfa-master <br>
+git init<br>
+git remote add origin https://github.com/YourUsername/YourRepoName.git<br>
+git remote -v<br>
+git add .<br>
+git commit -m ""<br>
+git pull origin main --allow-unrelated-histories<br>
+git push -u origin main<br>
 
 # CS 300-CS31S1 - Automata Theory and Formal Languages - FINAL PROJECT
 
