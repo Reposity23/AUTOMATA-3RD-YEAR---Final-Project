@@ -53,6 +53,11 @@ How to Use Program 1:
        States are represented as sets of the original NFA states, e.g., {1,2,6}
        Ø = dead/trap state
 
+
+<img width="1001" height="628" alt="image" src="https://github.com/user-attachments/assets/2374e698-2b96-4521-89c4-7b51fdf0418b" />
+<br>
+<img width="1021" height="612" alt="image" src="https://github.com/user-attachments/assets/7440252a-ca64-4bc1-8be8-76022697d792" />
+<br>
 Program 2: DFA Minimization Tool (Implementation)
 A command-line tool that implements Hopcroft's algorithm to minimize any DFA. It takes a DFA in the JSON format exported by Program 1, removes unreachable states, runs the minimization algorithm, and then displays the resulting minimized DFA as a new transition table.
 
