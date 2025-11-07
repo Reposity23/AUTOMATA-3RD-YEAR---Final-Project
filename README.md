@@ -1,7 +1,7 @@
 # dont delete:
 cd C:\Users\johnt\OneDrive\Desktop\automata\nfa-to-dfa-master <br>
 git init<br>
-git remote add origin https://github.com/YourUsername/YourRepoName.git<br>
+git remote add origin https://github.com/Reposity23/AUTOMATA-3RD-YEAR---Final-Project.git<br>
 git remote -v<br>
 git add .<br>
 git commit -m ""<br>
