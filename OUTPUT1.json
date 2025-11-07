@@ -1,0 +1,73 @@
+{
+    "alphabet": [
+        "a",
+        "b"
+    ],
+    "states": [
+        {
+            "name": "1",
+            "coords": [
+                124.0,
+                178.4,
+                174.0,
+                228.4
+            ],
+            "is_start": true,
+            "is_final": false
+        },
+        {
+            "name": "2",
+            "coords": [
+                303.0,
+                119.4,
+                353.0,
+                169.4
+            ],
+            "is_start": false,
+            "is_final": false
+        },
+        {
+            "name": "3",
+            "coords": [
+                366.0,
+                220.4,
+                416.0,
+                270.4
+            ],
+            "is_start": false,
+            "is_final": false
+        }
+    ],
+    "transitions": [
+        {
+            "source": "1",
+            "target": "1",
+            "symbol": "a"
+        },
+        {
+            "source": "1",
+            "target": "2",
+            "symbol": "b"
+        },
+        {
+            "source": "2",
+            "target": "1",
+            "symbol": "a"
+        },
+        {
+            "source": "2",
+            "target": "3",
+            "symbol": "b"
+        },
+        {
+            "source": "3",
+            "target": "2",
+            "symbol": "b"
+        },
+        {
+            "source": "3",
+            "target": "3",
+            "symbol": "a"
+        }
+    ]
+}

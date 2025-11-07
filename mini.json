@@ -1,0 +1,25 @@
+{
+    "alphabet": [
+        "a",
+        "b"
+    ],
+    "states": [
+        {
+            "name": "{1,2,3}",
+            "is_start": true,
+            "is_final": false
+        }
+    ],
+    "transitions": [
+        {
+            "source": "{1,2,3}",
+            "target": "{1,2,3}",
+            "symbol": "b"
+        },
+        {
+            "source": "{1,2,3}",
+            "target": "{1,2,3}",
+            "symbol": "a"
+        }
+    ]
+}
