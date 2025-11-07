@@ -920,38 +920,85 @@ class DragDropApp:
             tags = ('oddrow',) if i % 2 != 0 else ()
             self.dfa_table.insert("", "end", values=row, tags=tags)
 
-
+    # ==================================================================
+    # === MODIFIED FUNCTION ===
+    # ==================================================================
     def export_to_json(self):
-
-        """Saves the current graph state to an auto-incrementing JSON file."""
+        """Saves the current graph state to an auto-incrementing JSON file
+           with clean, sorted, and validated formatting."""
         try:
             states_data = []
-            for item_id, name in self.state_names.items():
+            transitions_data = []
+            alphabet_set = set()
+            unique_transitions_set = set()
+
+            # --- 1. Determine Start State ---
+            # Use the same sorting key as the tables
+            def state_sort_key(name):
+                # Sort numerically if possible, otherwise alphabetically
+                return (int(name) if name.isdigit() else float('inf'), name)
+
+            start_state_name = None
+            if self.start_state_item and self.start_state_item in self.state_names:
+                start_state_name = self.state_names[self.start_state_item]
+            elif self.state_names:
+                # If no start state is set, default to the first state added
+                all_names = list(self.state_names.values())
+                all_names.sort(key=state_sort_key)
+                if all_names:
+                    start_state_name = all_names[0]
+
+            # --- 2. Process States ---
+            # Sort states by name using the same key
+            sorted_items = sorted(self.state_names.items(), key=lambda item: state_sort_key(item[1]))
+            
+            for item_id, name in sorted_items:
                 try:
                     coords = self.graph_canvas.coords(item_id)
                     if not coords: continue 
                     
-                    states_data.append({
+                    # Round coordinates to 2 decimal places
+                    rounded_coords = [round(c, 2) for c in coords]
+                    
+                    # Build state dictionary with consistent key order
+                    state_dict = {
                         "name": name,
-                        "coords": coords,
-                        "is_start": item_id == self.start_state_item,
+                        "coords": rounded_coords,
+                        "is_start": name == start_state_name,
                         "is_final": item_id in self.final_states
-                    })
+                    }
+                    states_data.append(state_dict)
                 except tk.TclError:
                     continue 
 
-            transitions_data = []
+            # --- 3. Process Transitions ---
             for (src_item, dest_item, symbol) in self.transitions:
                 src_name = self.state_names.get(src_item)
                 dest_name = self.state_names.get(dest_item)
+                
                 if src_name and dest_name:
-                    transitions_data.append({
-                        "source": src_name,
-                        "target": dest_name,
-                        "symbol": symbol
-                    })
+                    # Add to alphabet (ignore epsilon)
+                    if symbol not in self.epsilon_symbols:
+                        alphabet_set.add(symbol)
+                    
+                    # Ensure transition is unique
+                    transition_tuple = (src_name, dest_name, symbol)
+                    if transition_tuple not in unique_transitions_set:
+                        unique_transitions_set.add(transition_tuple)
+                        # Build transition dictionary with consistent key order
+                        transitions_data.append({
+                            "source": src_name,
+                            "target": dest_name,
+                            "symbol": symbol
+                        })
             
+            # Sort transitions for readability
+            transitions_data.sort(key=lambda t: (state_sort_key(t['source']), state_sort_key(t['target']), t['symbol']))
+
+            # --- 4. Build Final JSON Output ---
+            # Build final dictionary with consistent key order
             output_data = {
+                "alphabet": sorted(list(alphabet_set)),
                 "states": states_data,
                 "transitions": transitions_data
             }
@@ -965,6 +1012,9 @@ class DragDropApp:
 
         except Exception as e:
             simpledialog.messagebox.showerror("Export Error", f"Failed to export JSON: {e}")
+    # ==================================================================
+    # === END MODIFIED FUNCTION ===
+    # ==================================================================
 
     def upload_from_json(self):
  
@@ -1041,5 +1091,3 @@ if __name__ == "__main__":
     app = DragDropApp(root)
     root.state('zoomed') 
     root.mainloop()
-
-
