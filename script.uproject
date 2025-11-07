@@ -1,0 +1,83 @@
+Here is the cleaned script with all the stage directions and timing notes removed, leaving just the spoken parts for each member.
+
+***
+
+### **(Member 1) Introduction**
+
+Good day, everyone. We are here to present our final project for **CS 300-CS31S1: Automata Theory and Formal Languages**.
+
+Throughout this course, we've studied the theoretical building blocks of computation. Our project aims to bring those concepts to life through two distinct programs: a 'Real-Life Application' program and an 'Implementation' program.
+
+For our **real-life application**, we built **Program 1**, which is a visual, interactive NFA editor. This tool allows anyone to graphically design a Nondeterministic Finite Automaton and then automatically convert it into an equivalent Deterministic Finite Automaton using the subset construction algorithm.
+
+For our **implementation** program, we created **Program 2**, a command-line tool that takes a DFA in a JSON format—like the one from Program 1—and uses **Hopcroft's minimization algorithm** to produce its most optimized, minimal-state equivalent.
+
+This combination allows us to visually design an automaton, like one for a text parser or a simple vending machine, and then use a core algorithm to make it as efficient as possible.
+
+To start our demo, I'll pass it over to [Member 2] to demonstrate Program 1.
+
+***
+
+### **(Member 2) Program 1: Visual NFA to DFA Converter Demo**
+
+Thank you. I am now running **Program 1**.
+
+Okay, so here is our **Visual NFA to DFA editor**, which we built using Python and Tkinter. On the right, we have this character which acts as our state generator, and on the left is the main canvas where we will build our automaton. The UI also supports **panning** by dragging the canvas and **zooming** with the mouse wheel, which is very useful for building larger, more complex graphs.
+
+First, I will create **four states** to build a slightly more complex NFA. I'll drag the 'mouth' icon onto the canvas to create **State 1**... now **State 2**... **State 3**... and **State 4**.
+
+Next, I need to define the start and final states. I'll **right-click on State 1** and select 'Set as Starting State'. You can see the entry arrow appears. For this demo, I'll set **two final states**: I'll **right-click State 3** and 'Toggle Final State', and I'll also **right-click State 4** and 'Toggle Final State'. You can see the inner circle indicating they are accepting states.
+
+Now, I'll add the transitions:
+* First, a transition from **State 1 to State 2** on symbol **'a'**.
+* I'll also add an **epsilon transition** from **State 1 directly to State 3**. I just type 'e' in the symbol dialog. This already makes it a nondeterministic machine, as State 1 has a path on 'a' and a path on 'epsilon'.
+* Now, from **State 2**, I'll add a **self-loop** on symbol **'b'**.
+* And from **State 2**, I'll add another transition to **State 4** on symbol **'a'**.
+* Finally, from **State 3**, I'll add a transition to **State 4** on symbol **'b'**.
+
+So, we have a complete NFA. With this ready, I will now click the **'Convert to DFA' button**.
+
+Instantly, the two tables at the bottom are populated. The **NFA table** on the left shows the transitions we just drew, including the 'ε' column.
+
+But the real result is the **DFA table** on the right. This shows the output of the subset construction algorithm. Our new start state is `{1, 3}`, which is the **epsilon-closure** of our original State 1. You can also see complex new states like `{4}` or `{2}` have been created, and the table is fully deterministic, with no empty cells. It also correctly identifies the dead state, `Ø`, for any undefined transitions.
+
+Finally, to pass this to the next part of our project, I'll save this machine. I'll click 'Export to .JSON'. This saves our new DFA as `OUTPUT1.json`.
+
+That concludes the demo for Program 1. Now, [Member 3] will show you Program 2.
+
+***
+
+### **(Member 3) Program 2: DFA Minimization Tool Demo**
+
+Thanks. I am now in the terminal to run **Program 2**, our DFA Minimization tool. This program implements Hopcroft's algorithm, which is a very efficient method for minimizing DFAs.
+
+I'll run the script by typing `python PROGRAM2.py`.
+
+The program starts and asks for the path to the input DFA JSON file. I'll enter `OUTPUT1.json`, which [Member 2] just exported from the visual editor.
+
+Okay, the script has run. You can see the step-by-step process in the terminal.
+1.  It first **completes the DFA** by adding an internal 'dead state' for any missing transitions.
+2.  Then, it **removes any unreachable states**—states that can't be reached from the start state.
+3.  After that, it prints the **'Original DFA (Reachable)' table**. This is our starting point *before* minimization.
+
+Then, the main algorithm runs. Hopcroft's algorithm works by initially partitioning all states into two groups—**Final** and **Non-Final**—and then it repeatedly refines those partitions by checking if states are "distinguishable" by any input symbol.
+
+Right below the original, it prints the final **'Minimized DFA' transition table**. In this new table, any states that the algorithm found to be "indistinguishable" are merged into a single state, represented by a set. This new table represents the *most efficient* automaton—the one with the *fewest possible states*—that still accepts the exact same language as our original machine. This is crucial for optimizing parsers, lexers, and any state machine implementation in the real world.
+
+Finally, the program asks if I want to save this minimized DFA to a new JSON file. I'll type 'y' for yes, and I'll name the file `minimized.json`.
+
+This completes the demo of Program 2. Now, I'll hand it over to [Member 4] for the conclusion.
+
+***
+
+### **(Member 4) Conclusion**
+
+Thank you. To summarize our project, we have successfully demonstrated the complete workflow of designing and optimizing an automaton.
+
+Our **Program 1**, the 'real-life application', provides a visual, user-friendly interface to build complex NFAs and apply the **subset construction algorithm** to convert them into DFAs.
+
+Our **Program 2**, the 'implementation' program, takes that output and demonstrates a core optimization algorithm from our class, **Hopcroft's minimization**, to produce the most efficient DFA possible.
+
+Together, these programs cover the key theoretical concepts and practical applications of Automata Theory, from initial design to final optimization.
+
+On behalf of all our members, thank you for watching our presentation.
