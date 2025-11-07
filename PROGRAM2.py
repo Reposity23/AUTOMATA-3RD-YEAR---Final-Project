@@ -20,7 +20,7 @@ def _format_state_name(partition):
         sorted_states = sorted(list(partition))
     return "{" + ",".join(sorted_states) + "}"
 
-# --- Main DFA Minimization Class ---
+# Main DFA Minimization Class 
 
 class DFAMinimizer:
     """
@@ -424,3 +424,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
