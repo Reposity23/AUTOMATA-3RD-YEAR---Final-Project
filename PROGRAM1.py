@@ -3,7 +3,7 @@ from tkinter import ttk
 from tkinter import simpledialog 
 import math 
 from collections import deque 
-import json # Added for saving//loading the /json
+import json # Added for saving json
 from tkinter import filedialog 
 from tkinter import font 
 
@@ -1091,3 +1091,4 @@ if __name__ == "__main__":
     app = DragDropApp(root)
     root.state('zoomed') 
     root.mainloop()
+
